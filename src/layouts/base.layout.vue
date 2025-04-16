@@ -58,8 +58,23 @@ const tools = computed<ToolCategory[]>(() => [
         </div>
 
         <CollapsibleToolMenu :tools-by-category="tools" />
-
-        <div class="footer">
+        <footer>
+          <div style="padding: 20px;">
+            <div style="text-align: center;">
+              <div style="color: black;"> © 
+                <a  style="color: black; text-decoration: none;" href="https://beian.miit.gov.cn/" target="_blank"> 冀ICP备17000836号-2 </a>
+              </div>
+            </div>
+            <div style="text-align: center;">
+              <div style="color: black;">
+                <img src="//cdn.smallyoung.cn/libs/image/beian.png" alt="冀公网安备 13018102000160号" style="vertical-align:middle;">
+                <a style="color: black;text-decoration: none;" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=13018102000160">冀公网安备
+                  13018102000160号</a>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <!-- <div class="footer">
           <div>
             IT-Tools
 
@@ -85,7 +100,7 @@ const tools = computed<ToolCategory[]>(() => [
               Corentin Thomasset
             </c-link>
           </div>
-        </div>
+        </div> -->
       </div>
     </template>
 
@@ -120,7 +135,7 @@ const tools = computed<ToolCategory[]>(() => [
           <NavbarButtons v-if="!styleStore.isSmallScreen" />
         </div>
 
-        <c-tooltip position="bottom" :tooltip="$t('home.support')">
+        <!-- <c-tooltip position="bottom" :tooltip="$t('home.support')">
           <c-button
             round
             href="https://www.buymeacoffee.com/cthmsst"
@@ -133,11 +148,12 @@ const tools = computed<ToolCategory[]>(() => [
             {{ $t('home.buyMeACoffee') }}
             <NIcon v-if="!styleStore.isSmallScreen" :component="Heart" ml-2 />
           </c-button>
-        </c-tooltip>
+        </c-tooltip> -->
       </div>
       <slot />
     </template>
   </MenuLayout>
+  
 </template>
 
 <style lang="less" scoped>
